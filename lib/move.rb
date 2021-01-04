@@ -7,16 +7,19 @@ def display_board(board)
 end
 
 def input_to_index(user_input)
- puts "user_input: '1' #{board[0]}"
- puts "user_input: '2' #{board[1]}"
- puts "user_input: '3' #{board[2]}"
- puts "user_input: '4' #{board[3]}"
- puts "user_input: '5' #{board[4]}"
- puts "user_input: '6' #{board[5]}"
- puts "user_input: '7' #{board[6]}"
- puts "user_input: '8' #{board[7]}"
- puts "user_input: '9' #{board[8]}"
- user_input.to_i
+  user_input.to_i
+  puts "1: #{user_input[0]}, 2: #{user_input[1]}, 3: #{user_input[2]}, 4: #{user_input[3]}, 5: #{user_input[4]}, 6: #{user_input[5]},
+  7: #{user_input[6]}, 8: #{user_input[7]}, 9: #{user_input[8]}" 
+  return user_input
 end
 
-def move(board, user_input, character)
+let input_to_index = index
+let character = "X"
+
+def move(board, index, character)
+   board[index] = character
+   return board
+   character = "0"
+   board[index] = character
+   return board
+end
